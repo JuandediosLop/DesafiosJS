@@ -1,7 +1,8 @@
 function inicio(){
-    let comprar = prompt("¿Desea comprar un juego?").toLowerCase();
-    if (comprar == "si"){
-        comprado(comprarJuego());
+    alert("Bienvenido a Juegos Plus")
+    let buscar = prompt("¿Desea buscar un juego?").toLowerCase();
+    if (buscar == "si"){
+        encontrado(buscarJuego());
     }else{
         salirTienda();        
     }
@@ -17,17 +18,18 @@ function salirTienda(){
         }
 }
 
-function comprarJuego(){
-    return prompt("¿Qué juego desea comprar?");
+function buscarJuego(){
+    return prompt("¿Qué juego desea buscar la información?");
 }
 
-function comprado(nombreJuego){
-    alert("Felicidades compro el juego: " +nombreJuego);
+function encontrado(nombreJuego){
+    alert("Se encontro información del juego: " +nombreJuego );
+    alert(nombreJuego + " : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque sequi, minima inventore atque placeat nam!");
 
-    let otraCompra = prompt("¿Desea comprar otro juego?").toLowerCase();
+    let otraCompra = prompt("¿Desea buscar otro juego?").toLowerCase();
 
     if(otraCompra == "si"){
-        comprado(comprarJuego());
+        encontrado(buscarJuego());
     }
     else{
         salirTienda();
