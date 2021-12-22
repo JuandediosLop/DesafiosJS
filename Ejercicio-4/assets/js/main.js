@@ -1,27 +1,37 @@
-/* Para menú : Recurso obtenido de internet para hacer funcional el menu hamburguesa */
-var open = document.getElementById('hamburger');
-var changeIcon = true;
-
-open.addEventListener("click", function(){
-
-    var overlay = document.querySelector('.overlay');
-    var nav = document.querySelector('nav');
-    var icon = document.querySelector('.menu-toggle i');
-
-    overlay.classList.toggle("menu-open");
-    nav.classList.toggle("menu-open");
-
-    if (changeIcon) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-times");
-
-        changeIcon = false;
+function inicio(){
+    let comprar = prompt("¿Desea comprar un juego?").toLowerCase();
+    if (comprar == "si"){
+        comprado(comprarJuego());
+    }else{
+        salirTienda();        
     }
-    else {
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
-        changeIcon = true;
-    }
-});
-/* Fin de menu*/
+}
 
+function salirTienda(){
+    let salir = prompt("¿Desea salir de la tienda?").toLowerCase();
+        if(salir == "no"){
+            inicio();
+        }
+        else{
+            alert("Gracias por visitarnos");
+        }
+}
+
+function comprarJuego(){
+    return prompt("¿Qué juego desea comprar?");
+}
+
+function comprado(nombreJuego){
+    alert("Felicidades compro el juego: " +nombreJuego);
+
+    let otraCompra = prompt("¿Desea comprar otro juego?").toLowerCase();
+
+    if(otraCompra == "si"){
+        comprado(comprarJuego());
+    }
+    else{
+        salirTienda();
+    }
+}
+
+inicio();
