@@ -5,7 +5,7 @@ function agregarProducto(){
     let conteoProducto = parseInt( prompt("¿Cuantos productos desea añadir? \n Ingrese un valor númerico"));
 
     for(let index = 1; index <= conteoProducto; index++ ){
-        let ingresarProductos = prompt("Escribe el nombre del producto a ingresar: ").toLowerCase();
+        let ingresarProductos = prompt("Escribe el nombre del producto a ingresar: \n" + index + "/" + conteoProducto).toLowerCase();
         productos.push(ingresarProductos); 
     }
     alert("Lo redirigimos a ordenar su array");
