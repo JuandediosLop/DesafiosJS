@@ -1,7 +1,7 @@
 /*
     Simulador de una busqueda de juegos
     Simulador de registro de un usuario basico.
-    Los juegos estan alamacenador en un array y solo esos estan disponibles.
+    Los juegos estan almacenados en un array y solo esos estan disponibles.
 */
 
 // variable que almacena al usuario que se registra
