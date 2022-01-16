@@ -12,6 +12,7 @@ let juegos= [{nombre: 'HALO', genero: 'Disparos primera persona', plataforma:'Pc
              {nombre: 'FORTNITE', genero: 'Battle Royale', plataforma:'Pc, Xbox, PS4, Nintendo Switch, PS5', descripcion:'Es un juego online de disparos (lo que se conoce como un shooter) en tercera persona (es decir; que ves a tu personaje según se mueve). Tiene dos modos de juego: Salvar al mundo y Battle Royale.'},
              {nombre: 'CALL OF DUTY', genero: 'Disparos primera persona', plataforma:'Pc, Xbox, PS3', descripcion:'Es una serie de unos videojuegos de disparos en primera persona, de estilo bélico, desarrollada principal e inicialmente por Infinity Ward, Treyarch, Sledgehammer Games y en menor proporción Raven Software y distribuida por Activision.'},
              {nombre: 'LEAGUE OF LEGENDS', genero: 'MOBA', plataforma:'Pc', descripcion:'Es un videojuego del género multijugador de arena de batalla en línea y deporte electrónico el cual fue desarrollado por Riot Games para Microsoft Windows y OS X'},
+             {nombre: 'COUNTER STRIKE', genero: 'Disparos primera persona', plataforma:'Pc, Xbox', descripcion:'es un videojuego de disparos en primera persona multijugador desarrollado por Valve para Microsoft Windows. Es una modificación completa del juego Half-Life, realizada por Minh Le y Jess Cliffe, quienes lanzaron la primera versión el 18 de junio de 1999.'}
             ]
 /*
     Clases
@@ -100,18 +101,8 @@ function buscarJuego(){
         buscarOtroJuego();
     }else{
 
-        let juego = document.createElement("div");
-
-        juego.innerHTML = `<p class="juego"> 
-                    ${juegoObtenido.nombre} <br> 
-                    Descripción: ${juegoObtenido.descripcion} <br> 
-                    Genero: ${juegoObtenido.genero} <br> 
-                    Plataforma: ${juegoObtenido.plataforma} 
-                    </p>`;
-
-
-        document.body.appendChild(juego);
-
+        alert("Se encontro información del juego: " + juegoObtenido.nombre );
+        alert(juegoObtenido.nombre + ": \nDescripción: "+ juegoObtenido.descripcion + "\nCategoria: " +juegoObtenido.genero + "\nPlataforma: " + juegoObtenido.plataforma);
         buscarOtroJuego();
     }
 
