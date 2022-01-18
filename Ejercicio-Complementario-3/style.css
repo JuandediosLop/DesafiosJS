@@ -1,0 +1,30 @@
+#resultado{
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr);
+    margin-top: 1rem;
+}
+.producto{
+    display: flex;
+    flex-direction: column;
+    background-color: #010326;
+    color: #fff;    
+    text-transform: capitalize;text-transform: capitalize;
+    margin-bottom: 10px;
+    width: 500px;
+}
+
+.producto h2{
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #3C74A6;
+}
+
+.producto p{
+    font-weight: 400;
+    padding-left: 1rem;
+}
+
+.producto span{
+    color: #5ABFAD;
+}
